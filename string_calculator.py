@@ -1,12 +1,11 @@
-def parse_input(input_string):
-  number_list = []
-  if input_string == "":
-    number_list.append(0)
-  return number_list
+import re
+
+def split_numbers(input_string):
+  if not input_string:
+    return []
+  return re.split(r'[,\n]', input_string)
 
 def sum(input_string):
-  integer_list = parse_input(input_string)
-  sum = 0
-  for int in integer_list:
-    sum = sum + int
-  return sum
+  numbers = split_numbers(input_string)
+  total = sum(int(x) for x in numbers if x.strip())
+  return total
