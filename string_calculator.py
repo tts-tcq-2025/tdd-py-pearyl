@@ -2,7 +2,7 @@ def parse_input(input_string):
   number_list = []
   if input_string == "":
     number_list.append(0)
-  return list
+  return number_list
 
 def sum(input_string):
   integer_list = parse_input(input_string)
