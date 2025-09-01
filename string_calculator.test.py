@@ -1,8 +1,9 @@
 from string_calculator import sum
 
-def test_input(input):
-  if input == "":
-    assert sum(input) == 0
+def test_empty_string_returns_zero():
+  assert sum("") == 0
 
-if __name__ == '__main__':
-  test_input("")
+def test_addition():
+  assert sum(1,2,3,4,5) == 15
+
+
